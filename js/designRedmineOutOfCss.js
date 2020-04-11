@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Redmineデザイン
+// @name        Redmineデザイン（CSS外出し）
 // @description RedmineのWikiやチケットの見づらさを解消するスクリプトです。
 // @version     0.1
 // @copyright   Takayuki Yamaguchi
