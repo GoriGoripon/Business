@@ -1,0 +1,63 @@
+ /* Markdown記法（開始）：目次 */
+ /* Markdown記法（終了）：目次 */
+
+/*  Markdown記法（開始）：## ～ ##### */
+body{
+  counter-reset:chapter;
+}
+h1{
+  counter-reset:sub-chapter;
+}
+h2{
+  counter-reset:section;
+}
+h1::before{
+  counter-increment:chapter;
+  content:counter(chapter);
+}
+h2::before{
+  counter-increment:sub-chapter;
+  content:counter(chapter) "-" counter(sub-chapter);
+}
+h3::before{
+  counter-increment:section;
+  content:"(" counter(section) ")";
+}
+/*  Markdown記法（終了）：## ～ ##### */
+
+/*  Markdown記法（開始）：``` */
+div.wiki pre{
+  background-color:initial;
+  border:initial;
+  border-radius:initial;
+  width:initial;
+  overflow-x:initial;
+  overflow-y:initial;
+}
+.boxNote{
+  display:inline-block;
+  min-width:50%;
+  position:relative;
+  margin:2em 0;
+  padding:0.5em 1em;
+  border:solid 3px #62c1ce;
+}
+.boxNote .boxTitle{
+  position:absolute;
+  display:inline-block;
+  top:-27px;
+  left:-3px;
+  padding:0 9px;
+  height:25px;
+  line-height:25px;
+  font-size:17px;
+  background:#62c1ce;
+  color:#ffffff;
+  font-weight:bold;
+  border-radius:5px 5px 0 0;
+}
+pre{
+  margin:0;
+  padding:0;
+}
+/*  Markdown記法（終了）：``` */
